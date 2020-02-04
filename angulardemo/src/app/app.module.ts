@@ -1,3 +1,5 @@
+import { TranslateModule } from '@ngx-translate/core';
+import { LangTranslateModule } from './appModules/lang-translate.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -14,6 +16,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 
 import { Routes, RouterModule } from '@angular/router';
+import { PartnerlogoComponent } from './partnerlogo/partnerlogo.component';
 
 const myRoute: Routes = [
   {path:'', component:HomeComponent},
@@ -37,11 +40,14 @@ const myRoute: Routes = [
     RewardsComponent,
     FaqComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    PartnerlogoComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    LangTranslateModule,
+    TranslateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+{
+    "menu" :[
+        {"text":"Home", "link":"/"},
+        {"text":"How it works", "link":"howitworks"},
+        {"text":"Brands", "link":"brands"},
+        {"text":"Rewards", "link":"rewards"},
+        {"text":"Frequently Asked Questions", "link":"faq"}
+    ]
+}

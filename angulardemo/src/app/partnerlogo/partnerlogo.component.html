@@ -1,0 +1,7 @@
+<div class="container" style="align-items: center;">
+    <ng-container  *ngFor="let logo of logImages">
+        <a target="_blank" [href]="logo.link" style="margin-left: 50px;">
+            <img [src]="logo.image" >
+        </a>
+    </ng-container>
+</div>

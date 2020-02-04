@@ -1,33 +1,36 @@
 <app-header></app-header>
-<div >
+    
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         
+        <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-            <a class="nav-link" routerLink="/">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" routerLink="howitworks">How it works</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" routerLink="brands">Brands</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="rewards">Rewards</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="faq">Frequently Asked Questions</a>
-            </li>
-        </ul>
+        
+        <!--<ul class="navbar-nav mr-auto mt-lg-0">
+            <li class="nav-item" *ngFor="let _menu of menuItem">
+                <a class="nav-link" routerLink="{{_menu._route}}">{{'menu.name}}</a>                
+            </li>            
+        </ul>-->
+        <ul class="navbar-nav mr-auto mt-lg-0">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" 
+            class="nav-item" *ngFor="let _menu of 'menu' | translate">
+                <a class="nav-link" routerLink="{{_menu.link}}">{{_menu.text}}</a>                
+            </li>            
+        </ul>        
+        
         <ul class="nav navbar-nav navbar-right">
             <li><a class="nav-link" routerLink="register">Register</a></li>
             <li><a class="nav-link" routerLink="login">Login</a></li>
         </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+            <li><a class="nav-link" [class.active]="switchLang=='en'" (click)="selectedLanguage('en')">en</a></li>
+            <li><a class="nav-link" [class.active]="switchLang=='de'" (click)="selectedLanguage('de')">de</a></li>
+        </ul>
+
         <select>
             <option value="volvo">United Kingdom</option>
             <option value="saab">France</option>
@@ -36,5 +39,5 @@
             <option value="audi">Portugal</option>
         </select>
         </div>
+    </div>
     </nav>
-</div>
