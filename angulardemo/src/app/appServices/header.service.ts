@@ -9,4 +9,5 @@ export class HeaderService {
   constructor() { }
 
   selectedlang = new BehaviorSubject('en');
+  pageName = new BehaviorSubject('');
 }

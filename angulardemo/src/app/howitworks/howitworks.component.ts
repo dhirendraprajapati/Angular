@@ -9,8 +9,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HowitworksComponent implements OnInit {
   
-  constructor(public translate:TranslateService) { 
-    
+  constructor(public translate:TranslateService, private _header:HeaderService) { 
+    //console.log(this._header.selectedlang);
   }
 
   ngOnInit() {

@@ -25,7 +25,16 @@ const myRoute: Routes = [
   {path:'rewards', component:RewardsComponent},
   {path:'faq', component:FaqComponent},
   {path:'register', component:RegisterComponent},
-  {path:'login', component:LoginComponent}
+  {path:'login', component:LoginComponent},
+
+  //DE routes
+  {path:'de', component:HomeComponent},
+  {path:'de/howitworks', component:HowitworksComponent},
+  {path:'de/brands', component:BrandsComponent},
+  {path:'de/rewards', component:RewardsComponent},
+  {path:'de/faq', component:FaqComponent},
+  {path:'de/register', component:RegisterComponent},
+  {path:'de/login', component:LoginComponent}
 ]
 
 @NgModule({

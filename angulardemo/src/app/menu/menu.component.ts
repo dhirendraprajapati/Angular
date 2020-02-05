@@ -10,10 +10,24 @@ import { TranslateService } from '@ngx-translate/core';
 export class MenuComponent implements OnInit {
   switchLang;
   browserLang;
+  pageName;
+  menuLanguage;
 
   constructor(private _header: HeaderService, public translate:TranslateService) { 
     this._header.selectedlang.subscribe(res =>{
       this.switchLang=res;
+
+      if(res=='de'){
+        this.menuLanguage='de';
+      }
+      else{
+        this.menuLanguage='';
+      }      
+    })
+
+    this._header.pageName.subscribe(res1 =>{
+      this.pageName=res1;
+      //console.log(res1);
     })
 
     translate.addLangs(['en', 'de']);
@@ -28,13 +42,13 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  menuItem: any=[
+  /*menuItem: any=[
     {"_route":"/", "name":"Home"},
     {"_route":"howitworks", "name":"How it works"},
     {"_route":"brands", "name":"Brands"},
     {"_route":"rewards", "name":"Rewards"},
     {"_route":"faq", "name":"Frequently Asked Questions"}
-  ]
+  ]*/
 
   selectedLanguage(selectedLanguage){
     this._header.selectedlang.next(selectedLanguage)

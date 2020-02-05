@@ -10,7 +10,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new MultiTranslateHttpLoader(http, [
       {prefix: "./assets/translate/menu/", suffix: ".json"},
       {prefix: "./assets/translate/howitworks/", suffix: ".json"},
-      {prefix: "./assets/translate/brands/", suffix: ".json"}
+      {prefix: "./assets/translate/brands/", suffix: ".json"},
+      {prefix: "./assets/translate/home/", suffix: ".json"}
   ]);
 }
 
