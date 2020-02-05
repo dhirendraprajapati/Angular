@@ -1,5 +1,11 @@
 {
     "login":{
-        "L1":"Login Works!!"
+        "username":"Username",
+        "usernamePlaceHolder":"Enter Username",
+        "password": "Password",
+        "passwordPlaceHolder":"Enter Password",
+        "loginbtn":"Login",
+        "rememberme":"Remember me",
+        "forgotpwd":"Forgot"
     }
 }

@@ -1,5 +1,12 @@
 {
     "login":{
-        "L1":"D_Login Works!!"
+        "username":"Nutzername",
+        "usernamePlaceHolder":"Benutzername eingeben",
+        "password": "Passwort",
+        "passwordPlaceHolder":"Passwort eingeben",
+        "loginbtn":"Einloggen",
+        "rememberme":"Erinnere dich an mich",
+        "forgotpwd":"Vergessen"
+
     }
 }

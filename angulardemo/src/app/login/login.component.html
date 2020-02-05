@@ -1,3 +1,16 @@
-<p>login works!</p>
 
-<div>{{'login.L1' | translate}}</div>
+<div class="container col-4" style="background: #ddd;  border-radius: 10px; margin-top: 100px;" >
+    <label for="uname"><b>{{'login.username' | translate}}</b></label>
+    <input type="text" placeholder="{{'login.usernamePlaceHolder' | translate}}" name="uname" required>
+
+    <label for="psw"><b>{{'login.password' | translate}}</b></label>
+    <input type="password" placeholder="{{'login.passwordPlaceHolder' | translate}}" name="psw" required>
+        
+    <button type="submit">{{'login.loginbtn' | translate}}</button>
+    <div>
+        <label>
+        <input type="checkbox" checked="checked" name="remember"> {{'login.rememberme' | translate}}
+        </label>
+        <span class="psw">{{'login.forgotpwd' | translate}} <a href="#">{{'login.password' | translate}}?</a></span>
+    </div>
+</div>
