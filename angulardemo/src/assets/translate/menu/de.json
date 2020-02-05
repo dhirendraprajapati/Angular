@@ -5,5 +5,9 @@
         {"text":"Brands", "link":"brands"},
         {"text":"Belohnung", "link":"rewards"},
         {"text":"Häufig gestellte Fragen", "link":"faq"}
+    ],
+    "menu2" :[
+        {"text":"Registrieren", "link":"register"},
+        {"text":"Einloggen", "link":"login"}
     ]
 }

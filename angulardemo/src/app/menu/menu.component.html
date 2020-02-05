@@ -22,8 +22,13 @@
         </ul>        
         
         <ul class="nav navbar-nav navbar-right">
-            <li><a class="nav-link" routerLink="register">Register</a></li>
-            <li><a class="nav-link" routerLink="login">Login</a></li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" 
+            *ngFor="let _menu2 of 'menu2' | translate">
+                <a class="nav-link" routerLink="{{menuLanguage}}/{{_menu2.link}}">{{_menu2.text}}</a>
+            </li>
+
+            <!--<li><a class="nav-link" routerLink="register">Register</a></li>
+            <li><a class="nav-link" routerLink="login">Login</a></li>-->
         </ul>
         
         <ul class="nav navbar-nav navbar-right">
@@ -33,13 +38,13 @@
                 (click)="selectedLanguage('de')"  routerLink="de/{{pageName}}">de</a></li>
         </ul>
 
-        <select>
+        <!--<select>
             <option value="volvo">United Kingdom</option>
             <option value="saab">France</option>
             <option value="mercedes">Espana</option>
             <option value="audi">Polska</option>
             <option value="audi">Portugal</option>
-        </select>
+        </select>-->
         </div>
     </div>
     </nav>

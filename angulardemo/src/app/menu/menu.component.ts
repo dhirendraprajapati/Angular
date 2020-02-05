@@ -34,8 +34,8 @@ export class MenuComponent implements OnInit {
     translate.setDefaultLang('en');
     translate.use('en');
     this.browserLang=translate.getDefaultLang();
-    console.log('language set');
-    console.log(this.browserLang);
+    //console.log('language set');
+    //console.log(this.browserLang);
 
     this.languageChanged();
     this._header.selectedlang.next(this.browserLang);

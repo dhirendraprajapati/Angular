@@ -11,7 +11,11 @@ export function HttpLoaderFactory(http: HttpClient) {
       {prefix: "./assets/translate/menu/", suffix: ".json"},
       {prefix: "./assets/translate/howitworks/", suffix: ".json"},
       {prefix: "./assets/translate/brands/", suffix: ".json"},
-      {prefix: "./assets/translate/home/", suffix: ".json"}
+      {prefix: "./assets/translate/home/", suffix: ".json"},
+      {prefix: "./assets/translate/rewards/", suffix: ".json"},
+      {prefix: "./assets/translate/faq/", suffix: ".json"},
+      {prefix: "./assets/translate/register/", suffix: ".json"},
+      {prefix: "./assets/translate/login/", suffix: ".json"}
   ]);
 }
 
