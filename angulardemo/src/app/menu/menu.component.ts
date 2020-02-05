@@ -34,6 +34,8 @@ export class MenuComponent implements OnInit {
     translate.setDefaultLang('en');
     translate.use('en');
     this.browserLang=translate.getDefaultLang();
+    console.log('language set');
+    console.log(this.browserLang);
 
     this.languageChanged();
     this._header.selectedlang.next(this.browserLang);
@@ -58,6 +60,11 @@ export class MenuComponent implements OnInit {
   }
 
   languageChanged(){
-    this.translate.use(this.browserLang.match(/de|en/)? this.browserLang:'en');
+    //this.translate.use(this.browserLang.match(/de|en/)? this.browserLang:'en');
+
+    this._header.selectedlang.subscribe(res =>{
+      this.translate.use(res.match(/de|en/)? res:'en');
+    })
+    
   }
 }

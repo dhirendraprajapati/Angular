@@ -27,11 +27,11 @@ export class AppComponent {
 
         if(window.location.pathname.match('/de/') || window.location.pathname=='/de'){
           this._header.selectedlang.next('de');
-          console.log('de');
+          console.log('de1');
         }
         else{
           this._header.selectedlang.next('en');
-          console.log('en');
+          console.log('en1');
         }
       }
     })
